@@ -1,0 +1,133 @@
+@import "../../../../../node_modules/@angular/material/theming";
+
+@include mat-core();
+
+$mat-light: (
+  50: #3f51b5,
+  100: #000000,
+  200: #3f51b5,
+  300: #fc9977,
+  400: #fc8259,
+  500: #fb6c3b,
+  600: #fa551d,
+  700: #f44205,
+  800: #d63a04,
+  900: #b83204,
+  A100: #ffffff,
+  A200: #fff7f4,
+  A400: #fc8259,
+  A700: #f44205,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: white,
+  ),
+);
+
+$mat-dark: (
+  50: #8e97c9,
+  100: #ffffff,
+  200: #7486e9,
+  300: #fc9977,
+  400: #fc8259,
+  500: #fb6c3b,
+  600: #fa551d,
+  700: #f44205,
+  800: #d63a04,
+  900: #b83204,
+  A100: #ffffff,
+  A200: #fff7f4,
+  A400: #fc8259,
+  A700: #f44205,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: white,
+  ),
+);
+
+$primary: mat-palette($mat-light, 50);
+$accent: mat-palette($mat-light, 100);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+
+.text-color {
+  color: #000;
+}
+
+.theme-bg-color {
+  background-color: #ffffff;
+}
+
+.theme-btn-primary {
+  background-color: #3f51b5 !important;
+  color: #ffffff !important;
+}
+
+.theme-link {
+  color: #3f51b5 !important;
+}
+
+.theme-navbar {
+  box-shadow: 1px 1px 1px rgb(143, 143, 143)
+}
+
+@include angular-material-theme($theme);
+
+.dark-theme {
+  color: $light-primary-text;
+  $dark-primary: mat-palette($mat-dark, 50);
+  $dark-accent: mat-palette($mat-dark, 100);
+  $dark-warn: mat-palette($mat-red);
+  $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+  .text-color {
+    color: #fff !important;
+  }
+
+  .theme-bg-color {
+    background-color: #6d6d6d !important;
+  }
+
+  .theme-darker-bg-color {
+    background-color: #3a3a3a !important;
+  }
+
+  .theme-btn-primary {
+    background-color: #7486e9 !important;
+    color: #3c3c3c !important;
+  }
+
+  .theme-link {
+    color: #adb7ee !important;
+  }
+
+  .theme-navbar {
+    background-color: rgba(0, 0, 0, 0.87) !important;
+    box-shadow: 1px 1px 1px rgb(143, 143, 143)
+  }
+
+  @include angular-material-theme($dark-theme);
+}

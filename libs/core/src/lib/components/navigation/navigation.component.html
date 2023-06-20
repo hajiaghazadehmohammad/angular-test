@@ -1,0 +1,8 @@
+<div class="navigation">
+  <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    <a mat-tab-link *ngFor="let link of menuItems"
+       [routerLink]="link.url"
+       routerLinkActive="active"> {{link.title}} </a>
+  </nav>
+  <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+</div>

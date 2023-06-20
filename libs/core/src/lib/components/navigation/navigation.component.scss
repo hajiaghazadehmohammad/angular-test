@@ -1,0 +1,16 @@
+.navigation {
+  .mat-tab-nav-bar, .mat-tab-header {
+    border-bottom: none !important;
+  }
+
+  .mat-tab-link {
+    height: 63px;
+    min-width: 100px;
+    width: 100px;
+    margin-right: 20px;
+  }
+
+  .active{
+    border-bottom: 2px solid #999;
+  }
+}

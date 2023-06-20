@@ -1,0 +1,23 @@
+<div [ngClass]="{'dark-theme': themeService.isDarkTheme | async}" style="" class="main-layout">
+  <mat-toolbar class="theme-navbar">
+    <mat-toolbar-row class="toolbar-header">
+      <div class="left-panel">
+        <button mat-icon-button class="sign-out-btn" (click)="signOut()">
+          <mat-icon>logout</mat-icon>
+        </button>
+        <theme-switcher></theme-switcher>
+      </div>
+      <div class="right-panel">
+        <navigation></navigation>
+        <img src="./assets/images/main-logo.png" alt="logo">
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div class="main-content">
+    <mat-card class="main-content-card">
+      <mat-card-content class="card-content">
+        <router-outlet></router-outlet>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

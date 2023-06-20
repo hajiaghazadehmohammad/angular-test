@@ -1,0 +1,46 @@
+.main-layout {
+  height: 100%;
+
+  img {
+    width: 50px;
+    overflow: unset;
+  }
+
+  .toolbar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .sign-out-btn {
+        margin-right: 15px;
+        transform: rotate(180deg);
+      }
+    }
+
+    .right-panel{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .main-content {
+    width: 100%;
+    height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .main-content-card {
+      width: 100%;
+      position: relative;
+      height: calc(100vh - 96px);
+      border-radius: 0;
+    }
+  }
+}

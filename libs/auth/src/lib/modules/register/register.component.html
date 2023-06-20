@@ -1,0 +1,35 @@
+<div class="app-register" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box theme-darker-bg-color">
+    <mat-card-header>
+      <img src="./assets/images/main-logo.png" alt="logo">
+      <p class="welcome">Create New Account</p>
+    </mat-card-header>
+    <form [formGroup]="registerForm" (submit)="onRegisterSubmit()" class="sign-up-form">
+      <mat-card-content>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Email" formControlName="email">
+          <mat-error
+            *ngIf="registerForm.get('email')?.hasError('pattern')&&registerForm.get('email')?.errors!['pattern']">
+            Email is not correct
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="First Name" formControlName="firstName">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Last Name" formControlName="lastName">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Password" type="password" formControlName="password">
+        </mat-form-field>
+      </mat-card-content>
+      <div class="btn-wrapper">
+        <button [disabled]="!registerForm.valid" mat-raised-button class="btn-block theme-btn-primary"
+                type="submit"
+                color="primary">Register
+        </button>
+        <a routerLink="/auth/login" class="theme-link">Login</a>
+      </div>
+    </form>
+  </mat-card>
+</div>

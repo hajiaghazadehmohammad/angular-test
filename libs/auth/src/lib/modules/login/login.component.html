@@ -1,0 +1,26 @@
+<div class="app-login" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box theme-darker-bg-color">
+    <mat-card-header>
+      <img src="./assets/images/main-logo.png" alt="logo">
+      <p class="welcome">{{'auth.welcome'|translate}}</p>
+    </mat-card-header>
+    <form [formGroup]="loginForm" (submit)="onLoginSubmit()" class="login-form">
+      <mat-card-content>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Email" formControlName="email">
+          <mat-hint>Email is: <strong>admin@admin.com</strong></mat-hint>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Password" type="password" formControlName="password">
+          <mat-hint>Password is: <strong>admin1234</strong></mat-hint>
+        </mat-form-field>
+      </mat-card-content>
+      <div class="btn-wrapper">
+        <button mat-raised-button color="primary" class="btn-block theme-btn-primary"
+                type="submit">Login
+        </button>
+        <a routerLink="/auth/register" class="theme-link">Sign Up</a>
+      </div>
+    </form>
+  </mat-card>
+</div>

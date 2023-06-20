@@ -1,0 +1,14 @@
+<ng-select
+  [items]="options"
+  [bindLabel]="'name'"
+  [bindValue]="'id'"
+  [(ngModel)]="selectedLocationId"
+  placeholder="Search"
+  [loading]="isLoading"
+  loadingText="Loading..."
+  style="width: 500px"
+  #param
+  (input)="this.searchValue.next(param.searchTerm)"
+  (select)="onSelect()"
+>
+</ng-select>

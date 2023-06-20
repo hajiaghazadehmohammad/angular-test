@@ -1,0 +1,4 @@
+<mat-slide-toggle [checked]="isDarkTheme" (change)="toggleDarkTheme($event.checked)" class="toggle-wrapper">
+ <mat-icon *ngIf="!isDarkTheme" class="d-flex">mode_night</mat-icon>
+ <mat-icon *ngIf="isDarkTheme" class="d-flex">sunny</mat-icon>
+</mat-slide-toggle>

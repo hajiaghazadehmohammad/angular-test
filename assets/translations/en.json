@@ -1,0 +1,8 @@
+{
+  "auth": {
+    "welcome": "Welcome Back ;)"
+  },
+  "client": {
+    "current_weather": "Current Weather"
+  }
+}
